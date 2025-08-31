@@ -1,13 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Photos - Maha & Umers Wedding</title>
+    <style>
+        /* Same beautiful styles as before */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #fffaf0 0%, #ffe4e6 100%);
+            color: #4a4a4a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #d4a373;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            margin: 20px 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: #d4a373;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Upload Your Wedding Photos 📸</h1>
-    <form action="https://formspree.io/f/your-email-here" method="POST" enctype="multipart/form-data">
-        <input type="file" name="photos" multiple>
-        <button type="submit">Upload Photos</button>
-    </form>
+    <div class="container">
+        <h1>📸 Share Your Wedding Photos</h1>
+        <p>We're using Google Photos to collect everyone's pictures in one place!</p>
+        
+        <a href="https://photos.app.goo.gl/v8re95hkz221dMsX8" class="btn" target="_blank">
+             Add Photos to Google Album
+        </a>
+        
+        <p>Your photos will automatically appear in our wedding gallery!</p>
+        
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
 </body>
 </html>
