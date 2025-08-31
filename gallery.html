@@ -15,42 +15,49 @@
             color: #4a4a4a;
             line-height: 1.6;
             padding: 20px;
+            text-align: center;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 40px auto;
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
+            padding: 50px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
         }
         
         h1 {
             font-family: 'Playfair Display', serif;
             color: #d4a373;
             margin-bottom: 20px;
-            font-size: 2.8em;
+            font-size: 3em;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #8b5e3b;
+            margin-bottom: 40px;
         }
         
         .instructions {
             background: rgba(212, 163, 115, 0.1);
-            padding: 25px;
+            padding: 30px;
             border-radius: 15px;
-            margin: 30px 0;
+            margin: 40px 0;
             font-size: 1.2em;
+            line-height: 1.8;
         }
         
         .btn {
             display: inline-block;
-            padding: 18px 35px;
-            margin: 20px 10px;
+            padding: 20px 45px;
+            margin: 25px 15px;
             background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
             color: white;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.2em;
+            font-size: 1.3em;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
         }
@@ -58,29 +65,41 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            background: linear-gradient(135deg, #ff8e8e 0%, #ff6b6b 100%);
         }
         
-        .google-photos-container {
-            margin: 40px 0;
-            border: 3px solid #d4a373;
+        .preview-section {
+            margin: 50px 0;
+            padding: 40px;
+            background: rgba(255, 245, 245, 0.5);
             border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 3px dashed #d4a373;
         }
         
-        .google-photos-iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
+        .preview-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .preview-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid white;
         }
         
         .back-btn {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 40px;
+            padding: 15px 30px;
             color: #d4a373;
             text-decoration: none;
             font-size: 1.2em;
-            padding: 10px 20px;
             border: 2px solid #d4a373;
             border-radius: 50px;
             transition: all 0.3s ease;
@@ -91,46 +110,67 @@
             color: white;
         }
         
+        .featured-text {
+            font-style: italic;
+            color: #ff6b6b;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        
         @media (max-width: 768px) {
             h1 { font-size: 2.2em; }
-            .google-photos-iframe { height: 400px; }
-            .btn { padding: 15px 25px; font-size: 1.1em; }
+            .btn { padding: 15px 30px; font-size: 1.1em; margin: 10px; }
+            .preview-image { width: 120px; height: 120px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1> Our Wedding Gallery</h1>
-        <p>Relive the beautiful moments from our special day!</p>
+        <div class="subtitle">Relive the beautiful moments from our special day!</div>
         
         <div class="instructions">
-            <h3>How to Add Your Photos:</h3>
-            <p>1. Click "Add Photos to Album" below</p>
+            <h3> How to Share Your Photos:</h3>
+            <p>1. Click the button below to open our shared Google Photos album</p>
             <p>2. Sign in to your Google account</p>
-            <p>3. Select photos from your device</p>
-            <p>4. They'll appear here automatically! 📸</p>
+            <p>3. Click "Add photos" and select your favorite moments</p>
+            <p>4. They'll be instantly shared with everyone!</p>
         </div>
         
         <div>
             <a href="https://photos.app.goo.gl/v8re95hkz221dMsX8" class="btn" target="_blank">
-                 Add Your Photos
+                 Add Your Photos to Album
             </a>
             <a href="https://photos.app.goo.gl/v8re95hkz221dMsX8" class="btn" target="_blank">
-                 View Full Album
+                 View Full Photo Album
             </a>
         </div>
         
-        <div class="google-photos-container">
-            <iframe class="google-photos-iframe" 
-                    src="https://photos.app.goo.gl/v8re95hkz221dMsX8"
-                    allowfullscreen>
-            </iframe>
+        <div class="preview-section">
+            <h3> Featured Moments</h3>
+            <p>Here's a preview of our beautiful memories...</p>
+            
+            <div class="preview-images">
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #ffe4e6, #ffd6d8); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 3em; color: #ff6b6b;">💍</div>
+                    <p class="featured-text">Our ceremony</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #e0f7fa, #b2ebf2); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 3em; color: #0097a7;">🎉</div>
+                    <p class="featured-text">Reception</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 3em; color: #7b1fa2;">💃</div>
+                    <p class="featured-text">Dancing</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 1.1em;">
+                 Add your photos to see them featured here! 
+            </p>
         </div>
         
         <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
 </body>
 </html>
-
-
-
