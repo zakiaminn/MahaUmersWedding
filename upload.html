@@ -20,7 +20,7 @@
         
         .container {
             max-width: 800px;
-            margin: 100px auto;
+            margin: 40px auto;
             background: rgba(255, 255, 255, 0.95);
             padding: 50px;
             border-radius: 20px;
@@ -32,6 +32,31 @@
             color: #d4a373;
             margin-bottom: 30px;
             font-size: 2.8em;
+        }
+        
+        .instructions {
+            background: rgba(212, 163, 115, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
         }
         
         .btn {
@@ -68,6 +93,13 @@
             background: #d4a373;
             color: white;
         }
+        
+        .note {
+            font-style: italic;
+            color: #8b5e3b;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -75,11 +107,22 @@
         <h1>Share Your Wedding Photos</h1>
         <p>We're using Google Photos to collect everyone's beautiful moments in one place!</p>
         
+        <div class="instructions">
+            <h3>How to Add Your Photos:</h3>
+            <ol>
+                <li>Click the "Add Photos to Album" button below</li>
+                <li>Sign in to your Google account (if prompted)</li>
+                <li>Click the "Add photos" button in the Google Photos album</li>
+                <li>Select your favorite photos from your device</li>
+                <li>Click "Upload" - your photos will be instantly shared!</li>
+            </ol>
+        </div>
+        
         <a href="https://photos.app.goo.gl/v8re95hkz221dMsX8" class="btn" target="_blank">
-             Add Photos to Our Google Album
+            Add Photos to Our Google Album
         </a>
         
-        <p>Your photos will automatically be shared with all our guests!</p>
+        <p class="note">Your photos will be automatically added to our shared wedding album!</p>
         
         <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
